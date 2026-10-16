@@ -1,4 +1,6 @@
-export default async function BookPage({ params }) { 
+import type { BookDetailPageProps } from "@/app/types";
+
+export default async function BookPage({ params }: BookDetailPageProps) { 
     const { id } = await params;
 
     return (
