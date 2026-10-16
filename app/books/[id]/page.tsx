@@ -1,4 +1,8 @@
-import type { BookDetailPageProps } from "@/app/types";
+type BookDetailPageProps = {
+    params: Promise<{
+        id: string;
+    }>;
+}
 
 export default async function BookPage({ params }: BookDetailPageProps) { 
     const { id } = await params;
