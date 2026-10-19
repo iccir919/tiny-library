@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import type { ReactNode } from "react"
+import type { RootLayoutProps } from "./types"
 
 import Navbar from "./components/Navbar"
 
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   description: "A small, curated catalogue of books.",
 }
 
-export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={`${albertSans.className} ${montserratAlternates.variable}`}>

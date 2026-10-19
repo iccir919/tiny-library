@@ -8,8 +8,6 @@ export default function AboutPage() {
             <Image 
                 src={heroImage} 
                 alt="Tiny Library Hero Image" 
-                width={1798} 
-                height={1799} 
             />
         </div>
     )

@@ -8,11 +8,8 @@ export default function Navbar() {
             <Link href="/">
                 <Image 
                     src={logoImage} 
-                    alt="Tiny Library Logo" 
-                    width={200} 
-                    height={200} 
+                    alt="Tiny Library home" 
                 />
-                Tiny Library
             </Link>
             <Link href="/books">Books</Link>
             <Link href="/about">About</Link>
