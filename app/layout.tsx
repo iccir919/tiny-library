@@ -1,8 +1,7 @@
 import type { Metadata } from "next"
-import type { ReactNode } from "react"
-import type { RootLayoutProps } from "./types"
+import type { RootLayoutProps } from "@/app/types"
 
-import Navbar from "./components/Navbar"
+import Navbar from "@/app/components/Navbar"
 
 import "./globals.css"
 

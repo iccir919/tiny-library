@@ -1,11 +1,13 @@
+import type { ReactNode } from "react"
+
 export type RootLayoutProps = Readonly<{
-    children: React.ReactNode;
+    children: ReactNode
 }>
 
 export type BookDetailPageProps = {
     params: Promise<{
-        id: string;
-    }>;
+        id: string
+    }>
 }
 
 export type Book = {
