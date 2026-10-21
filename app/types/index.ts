@@ -10,6 +10,15 @@ export type BookDetailPageProps = {
     }>
 }
 
+export type BookCardProps = {
+    book: Book
+}
+
+export type PillProps = {
+    children: ReactNode,
+    className?: string
+}
+
 export type Book = {
     id: number,
     name: string,
