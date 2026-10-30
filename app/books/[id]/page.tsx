@@ -3,8 +3,15 @@ import type { BookDetailPageProps } from '@/app/types'
 import { getBookById } from '@/app/lib/books'
 
 import Image from 'next/image'
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
+
 import { Heart } from 'lucide-react'
+
+import type { Book } from '@/app/types'
+
 import Pill from '@/app/components/Pill'
+
 
 
 export const metadata = {
@@ -15,12 +22,24 @@ export const metadata = {
 
 
 export default async function BookPage({ params }: BookDetailPageProps) { 
-    const { id } = await params;
+    const { id: bookId } = await params;
+    let book: Book
 
-    const book = await getBookById(id)
-
+    try {
+        book = await getBookById(bookId)
+    } catch {
+        notFound()
+    }
     return (
         <main className="max-w-6xl mx-auto p-4">
+            <div className="text-center md:hidden">
+                <Link 
+                    href="/books"
+                    className="uppercase text-sm tracking-wide text-gray-500 hover:text-gray-700"
+                >
+                    Back to overview
+                </Link>
+            </div>
             <div className="flex flex-col md:flex-row md:items-center gap-6 mt-6">
                 <div className="md:w-1/2">
                     <Image
