@@ -1,4 +1,4 @@
-import type { BookDetailPageProps } from '@/app/types'
+import type { Book, BookDetailPageProps } from '@/app/types'
 
 import { getBookById } from '@/app/lib/books'
 
@@ -7,8 +7,6 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 import { Heart } from 'lucide-react'
-
-import type { Book } from '@/app/types'
 
 import Pill from '@/app/components/Pill'
 
