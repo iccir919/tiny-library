@@ -61,6 +61,18 @@ export default function AboutPage() {
                     )
                 })}
             </section>
+            <section className="border-t border-gray-200 pt-8 my-12">
+                <div className="max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-semibold text-gray-700">Our ethos</h2>
+                    <p className="text-gray-600 mt-4">
+                        At Tiny Library, we believe a good book shouldn&apos;t be hard to find. Our ethos is to create a small, carefully curated space where every title earns its place on the shelf and readers can trust that anything they pick up is worth their time.
+                    </p>
+                    <hr className="w-36 mx-auto border-gray-300 my-6" />
+                    <p className="text-gray-600 mt-4">
+                        Instead of overwhelming you with thousands of options, Tiny Library focuses on a modest collection that feels personal and approachable. We want readers to feel like they&apos;ve stepped into a cosy, well-loved library where someone has already done the hard work of sorting through the noise.
+                    </p>
+                </div>
+            </section>
         </main>
     )
 }
