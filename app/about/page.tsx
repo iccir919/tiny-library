@@ -1,7 +1,27 @@
 import Image from "next/image"
 import Link from "next/link"
 
+import { Layers, Globe, Flag } from "lucide-react"
+
 import heroImage from "@/public/hero-image-square.png"
+
+const features = [
+    {
+        icon: Layers,
+        title: 'Curated, not crowded',
+        description: 'Tiny Library keeps the catalogue intentionally small so every book feels like a recommendation.'
+    },
+    {
+        icon: Globe,
+        title: 'Easy to browse',
+        description: 'Clear categories and simple descriptions make it quick to choose what you actually want to read next.'
+    },
+    {
+        icon: Flag,
+        title: 'Readers first',
+        description: 'Every part of Tiny Library is designed to help you spend less time searching and more time reading.'
+    }
+]
 
 export default function AboutPage() {
     return (
@@ -26,6 +46,22 @@ export default function AboutPage() {
                     </div>
                 </div>
             </div>
+
+            <section className="grid grid-cols-1 md:grid-cols-3 border-t md:divide-x border-gray-200 divide-gray-200 gap-6 md:gap-0 pt-8 mt-12">
+                {features.map((feature) => {
+                    const Icon = feature.icon
+                    return (
+                        <div key={feature.title} className="md:px-6">
+                            <div className="flex items-center gap-4 mb-2">
+                                <Icon className="w-6 h-6 text-gray-700" />
+                                <h2 className="text-lg font-semibold text-gray-700">{feature.title}</h2>
+                            </div>
+                            <p className="text-gray-600">{feature.description}</p>
+                        </div>
+                    )
+                })}
+            </section>
         </main>
     )
 }
+
