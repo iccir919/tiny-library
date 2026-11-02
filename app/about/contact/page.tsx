@@ -6,10 +6,10 @@ export default function ContactPage() {
             <ul className="list-disc text-gray-600 mt-4 pl-5 space-y-2">
                 <li>Book suggestions: Tell us what we should add to the shelf.</li>
                 <li>Corrections: Spotted an error? Let us know so we can fix it.</li>
-                <li>Careers: Interested in joining Tiny Library? Send a short note and we’ll get back to you.</li>
+                <li>Careers: Interested in joining Tiny Library? Send a short note and we&apos;ll get back to you.</li>
             </ul>
             <p className="text-gray-600 mt-4">
-                Email:{' '}
+                Email:
                 <a 
                     href="mailto:hello@tinylibrary.example"
                     className="text-gray-700 underline ml-1" 

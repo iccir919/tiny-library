@@ -24,6 +24,10 @@ export type BookCardProps = {
     book: Book
 }
 
+export type BooksGridProps = {
+    books: Book[]
+}
+
 export type PillProps = {
     children: ReactNode,
     className?: string
