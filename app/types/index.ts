@@ -13,9 +13,9 @@ export type BookCategorySlug =
     | "self-help"
 
 export type Category = {
+    id: number,
     slug: BookCategorySlug,
-    name: string,
-    description: string
+    label: string
 }
 
 export type Book = {
