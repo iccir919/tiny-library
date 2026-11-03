@@ -1,5 +1,23 @@
 import type { ReactNode } from "react"
 
+// Keep in sync with app/data/categories.json
+export type BookCategorySlug = 
+    | "fiction"
+    | "non-fiction"
+    | "romance"
+    | "fantasy"
+    | "thriller"
+    | "horror"
+    | "historical"
+    | "biography"
+    | "self-help"
+
+export type Category = {
+    slug: BookCategorySlug,
+    name: string,
+    description: string
+}
+
 export type Book = {
     id: number,
     name: string,
