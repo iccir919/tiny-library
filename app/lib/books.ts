@@ -38,3 +38,10 @@ export async function getCategoryBySlug(slug: string): Promise<Category> {
     return category
 }
 
+export async function getBooksByCategory(slug: string): Promise<Book[]> {
+    await new Promise((resolve) => setTimeout(resolve, 1000)) // Simulate a delay
+
+    const booksInCategory = books.filter((b) => b.category === slug)
+
+    return booksInCategory
+}

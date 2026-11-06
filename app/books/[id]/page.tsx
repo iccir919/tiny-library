@@ -28,6 +28,7 @@ export default async function BookPage({ params }: BookDetailPageProps) {
     } catch {
         notFound()
     }
+    
     return (
         <main className="max-w-6xl mx-auto p-4">
             <div className="text-center md:hidden">

@@ -38,6 +38,12 @@ export type BookDetailPageProps = {
     }>
 }
 
+export type CategoryPageProps = {
+    params: Promise<{
+        categoryName: string
+    }>
+}
+
 export type BookCardProps = {
     book: Book
 }
