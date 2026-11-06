@@ -26,7 +26,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     }
 
     return (
-        <main className="max-w-6xl mx-auto p-4">
+        <main>
             <h1 className="text-4xl font-semibold text-gray-700 mb-4">{category.label}</h1>
 
             <BooksGrid books={books} />

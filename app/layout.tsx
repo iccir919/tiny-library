@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import type { RootLayoutProps } from "@/app/types"
+import type { LayoutProps } from "@/app/types"
 
 import Navbar from "@/app/components/Navbar"
 
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   description: "A small, curated catalogue of books.",
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body className={`${albertSans.className} ${montserratAlternates.variable}`}>

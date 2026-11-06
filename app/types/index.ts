@@ -28,7 +28,7 @@ export type Book = {
     dateAdded: string
 }
 
-export type RootLayoutProps = Readonly<{
+export type LayoutProps = Readonly<{
     children: ReactNode
 }>
 
