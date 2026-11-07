@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image"
 import logoImage from "@/public/tiny-library-logo.png"
+import NavLink from "@/app/components/NavLink"
 
 export default function Navbar() {
     return (
@@ -14,8 +15,8 @@ export default function Navbar() {
                     />
                 </Link>
                 <div className="flex gap-6 text-sm tracking-wide uppercase">
-                    <Link href="/books">Books</Link>
-                    <Link href="/about">About</Link>
+                    <NavLink href="/books">Books</NavLink>
+                    <NavLink href="/about">About</NavLink>
                 </div>
             </div>
         </nav>

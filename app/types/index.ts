@@ -44,6 +44,11 @@ export type CategoryPageProps = {
     }>
 }
 
+export type NavLinkProps = {
+    href: string,
+    children: ReactNode
+}
+
 export type BookCardProps = {
     book: Book
 }
