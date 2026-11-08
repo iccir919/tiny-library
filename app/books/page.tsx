@@ -20,7 +20,7 @@ export default async function BooksPage({ searchParams }: BooksPageProps) {
             <div className="flex flex-col md:flex-row  justify-between items-start md:items-center gap-6 mb-6">
                 <h1 className="text-4xl font-semibold text-gray-700">Books</h1>
 
-                <Form className="flex items-center gap-2" action="/books">
+                <Form className="flex items-center w-full md:w-auto gap-2" action="/books">
                     <input
                         id="query"
                         type="text"
