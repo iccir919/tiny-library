@@ -14,7 +14,7 @@ export default function Navbar() {
                         alt="Tiny Library home" 
                     />
                 </Link>
-                <div className="flex gap-6 text-sm tracking-wide uppercase">
+                <div className="flex gap-6">
                     <NavLink href="/books">Books</NavLink>
                     <NavLink href="/about">About</NavLink>
                 </div>

@@ -10,14 +10,10 @@ import { Heart } from 'lucide-react'
 
 import Pill from '@/app/components/Pill'
 
-
-
 export const metadata = {
     title: 'Tiny Library - Book Details',
     description: 'Details of a specific book in the Tiny Library',
 }
-
-
 
 export default async function BookPage({ params }: BookDetailPageProps) { 
     const { id: bookId } = await params;

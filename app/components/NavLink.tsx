@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
-import { NavLinkProps } from "@/app/types"
+import type { NavLinkProps } from "@/app/types"
 
 export default function NavLink({ href, children }: NavLinkProps) {
     const pathname = usePathname()

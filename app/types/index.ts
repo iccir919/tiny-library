@@ -32,11 +32,6 @@ export type LayoutProps = Readonly<{
     children: ReactNode
 }>
 
-export type BookDetailPageProps = {
-    params: Promise<{
-        id: string
-    }>
-}
 
 export type CategoryPageProps = {
     params: Promise<{
@@ -47,6 +42,18 @@ export type CategoryPageProps = {
 export type NavLinkProps = {
     href: string,
     children: ReactNode
+}
+
+export type BooksPageProps = {
+    searchParams: Promise<{
+        query?: string
+    }>
+}
+
+export type BookDetailPageProps = {
+    params: Promise<{
+        id: string
+    }>
 }
 
 export type BookCardProps = {

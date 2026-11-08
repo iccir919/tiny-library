@@ -12,6 +12,23 @@ export async function getAllBooks(): Promise<Book[]> {
     return books
 }
 
+export async function searchBooks(query: string): Promise<Book[]> {
+    await new Promise((resolve) => setTimeout(resolve, 1000)) // Simulate a delay
+
+
+    let normalizedQuery = query.trim()
+    
+    if (!normalizedQuery) return books
+
+    normalizedQuery = normalizedQuery.toLowerCase()
+
+    const results = books.filter((book) =>
+        book.name.toLowerCase().includes(normalizedQuery) ||
+        book.author.toLowerCase().includes(normalizedQuery)
+    )
+
+    return results}
+
 export async function getBookById(id: string | number): Promise<Book> {
 
     await new Promise((resolve) => setTimeout(resolve, 1000)) // Simulate a delay
