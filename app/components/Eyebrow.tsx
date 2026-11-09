@@ -1,9 +1,11 @@
 import type { EyebrowProps } from "@/app/types"
 
+
+
 export default function Eyebrow({ children, className }: EyebrowProps) {
     return (
-        <span className={`text-sm font-semibold text-gray-500 uppercase tracking-wide ${className ?? ""}`}>
+        <p className={`text-sm uppercase tracking-wide text-gray-700 ${className ?? ""}`}>
             {children}
-        </span>
+        </p>
     )
 }

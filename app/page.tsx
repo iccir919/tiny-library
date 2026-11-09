@@ -22,10 +22,10 @@ export default function Home() {
           </div>
         </div>
         <Image 
-        priority
-        src={heroImage} 
-        alt="A view of a beach, looking out over the coast, which is flat and sandy. The sky is blue with a few clouds."
-        className="w-full md:w-2/5 h-auto"
+          priority
+          src={heroImage} 
+          alt=""
+          className="w-full md:w-2/5 h-auto"
         />
       </div>
     </main>
