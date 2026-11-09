@@ -1,3 +1,6 @@
+import Eyebrow from "@/app/components/Eyebrow"
+import ButtonLink from "@/app/components/ButtonLink"
+
 import Image from "next/image"
 import Link from "next/link"
 
@@ -34,15 +37,15 @@ export default function AboutPage() {
                     alt="A view of a beach, looking out over the coast, which is flat and sandy. The sky is blue with a few clouds." 
                 />
                 <div className="flex-1">
-                    <p className="text-sm uppercase tracking-wide text-gray-700 mt-6 md:mt-0">About Tiny Library</p>
-                    <h1 className="text-4xl font-semibold text-gray-700 mt-2">Small shelf, big impact</h1>
+                    <Eyebrow className="mt-6 md:mt-0">About Tiny Library</Eyebrow>
+                    <h1 className="text-5xl font-semibold text-gray-700 mt-2">Small shelf, big impact</h1>
                     <p className="text-gray-600 mt-4">
                         Tiny Library started as a simple idea: make it easier for curious readers to actually find books they&apos;ll love, not just scroll endless lists. Every title here is chosen with care, not algorithms.
                     </p>
                     <div className="text-center mt-6">
-                        <Link href="/about/contact" className="inline-block uppercase border border-black text-black text-sm tracking-wide px-4 py-2 hover:bg-black hover:text-white transition-colors">
+                        <ButtonLink href="/about/contact">
                             Contact Us
-                        </Link>
+                        </ButtonLink>
                     </div>
                 </div>
             </div>

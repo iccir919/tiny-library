@@ -68,3 +68,13 @@ export type PillProps = {
     children: ReactNode,
     className?: string
 }
+
+export type ButtonLinkProps = {
+    href: string,
+    children: ReactNode
+}
+
+export type EyebrowProps = {
+    children: ReactNode,
+    className?: string
+}

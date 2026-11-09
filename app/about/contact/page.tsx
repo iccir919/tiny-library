@@ -1,7 +1,9 @@
+import Eyebrow from "@/app/components/Eyebrow"
+
 export default function ContactPage() {
     return (
         <main className="max-w-2xl mx-auto p-4">
-            <p className="text-sm uppercase tracking-wide text-gray-700">Ways to reach us</p>
+            <Eyebrow>Ways to reach us</Eyebrow>
             <h1 className="text-4xl font-semibold text-gray-700 mt-2">Contact</h1>
             <ul className="list-disc text-gray-600 mt-4 pl-5 space-y-2">
                 <li>Book suggestions: Tell us what we should add to the shelf.</li>
