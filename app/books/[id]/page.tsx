@@ -5,14 +5,25 @@ import { getBookById } from '@/app/lib/books'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import type { Metadata } from "next"
 
 import { Heart } from 'lucide-react'
 
 import Pill from '@/app/components/Pill'
 
-export const metadata = {
-    title: 'Tiny Library - Book Details',
-    description: 'Details of a specific book in the Tiny Library',
+export async function generateMetadata({ params }: BookDetailPageProps): Promise<Metadata> {
+    const { id: bookId } = await params
+    let book: Book
+
+    try {
+        book = await getBookById(bookId)
+    } catch {
+        notFound()
+    }
+
+    return {
+        title: book.name 
+    }
 }
 
 export default async function BookPage({ params }: BookDetailPageProps) { 

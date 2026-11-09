@@ -21,7 +21,10 @@ const nunitoSans = Nunito_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Tiny Library",
+  title: {
+    template: "%s - Tiny Library",
+    default: "Tiny Library",
+},
   description: "A small, curated catalogue of books.",
 }
 

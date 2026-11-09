@@ -1,5 +1,7 @@
 import type { Book, Category } from "@/app/types"
 
+import { cache } from "react"
+
 import booksData from "@/app/data/books.json"
 import categoriesData from "@/app/data/categories.json"
 
@@ -29,7 +31,7 @@ export async function searchBooks(query: string): Promise<Book[]> {
 
     return results}
 
-export async function getBookById(id: string | number): Promise<Book> {
+export const getBookById = cache(async (id: string | number): Promise<Book> => {
 
     await new Promise((resolve) => setTimeout(resolve, 1000)) // Simulate a delay
 
@@ -39,21 +41,21 @@ export async function getBookById(id: string | number): Promise<Book> {
         throw new Error(`Book with ID ${id} not found`)
     }
     return book
-}
+})
 
 export async function getAllCategories(): Promise<Category[]> {
     await new Promise((resolve) => setTimeout(resolve, 1000)) // Simulate a delay
     return categories
 }
 
-export async function getCategoryBySlug(slug: string): Promise<Category> {
+export const getCategoryBySlug = cache(async (slug: string): Promise<Category> => {
     await new Promise((resolve) => setTimeout(resolve, 1000)) // Simulate a delay
     const category = categories.find((c) => c.slug === slug)
     if (!category) {
         throw new Error(`Category with slug ${slug} not found`)
     }
     return category
-}
+})
 
 export async function getBooksByCategory(slug: string): Promise<Book[]> {
     await new Promise((resolve) => setTimeout(resolve, 1000)) // Simulate a delay

@@ -5,10 +5,21 @@ import { getCategoryBySlug, getBooksByCategory } from '@/app/lib/books'
 import BooksGrid from '@/app/components/BooksGrid'
 
 import { notFound } from 'next/navigation'
+import type { Metadata } from "next"
 
-export const metadata = {
-    title: 'Tiny Library - Category',
-    description: 'Books in a specific category in the Tiny Library',
+export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
+    const { categoryName } = await params
+    let category: Category
+
+    try {
+        category = await getCategoryBySlug(categoryName)
+    } catch {
+        notFound()
+    }
+
+    return {
+        title: category.label
+    }
 }
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
