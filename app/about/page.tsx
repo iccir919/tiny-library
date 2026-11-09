@@ -2,7 +2,6 @@ import Eyebrow from "@/app/components/Eyebrow"
 import ButtonLink from "@/app/components/ButtonLink"
 
 import Image from "next/image"
-import Link from "next/link"
 
 import { Layers, Globe, Flag } from "lucide-react"
 

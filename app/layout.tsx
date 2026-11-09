@@ -5,19 +5,19 @@ import Navbar from "@/app/components/Navbar"
 
 import "./globals.css"
 
-import { Albert_Sans, Montserrat_Alternates } from "next/font/google"
+import { Lato, Nunito_Sans } from "next/font/google"
 
 
-const albertSans = Albert_Sans({
-  subsets: ["latin"],
-  display: "swap",
+const lato = Lato({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  display: 'swap',
+  variable: "--font-heading",
 })
 
-const montserratAlternates = Montserrat_Alternates({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-heading",
+const nunitoSans = Nunito_Sans({
+  subsets: ['latin'],
+  display: 'swap', 
 })
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      <body className={`${albertSans.className} ${montserratAlternates.variable}`}>
+      <body className={`${nunitoSans.className} ${lato.variable}`}>
         <Navbar />
         {children}
       </body>
