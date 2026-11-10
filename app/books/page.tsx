@@ -9,7 +9,11 @@ import { getAllBooks, searchBooks } from "@/app/lib/books"
 export default async function BooksPage({ searchParams }: BooksPageProps) {
     const { query } = await searchParams
 
-    const books = query ? await searchBooks(query) : await getAllBooks()
+
+    const [allBooks, searchResults] = await Promise.all([
+        getAllBooks(),
+        searchBooks(query || "")
+    ])
 
     return (
         <main>
@@ -17,10 +21,10 @@ export default async function BooksPage({ searchParams }: BooksPageProps) {
             <div className="flex flex-col md:flex-row  justify-between items-start md:items-center gap-6 mb-6">
                 <h1 className="text-4xl font-semibold text-gray-700">Books</h1>
 
-                <SearchBox query={query} books={books} />
+                <SearchBox query={query} books={allBooks} />
             </div>
 
-            <BooksGrid books={books} />
+            <BooksGrid books={searchResults} />
         </main>
     )
 }

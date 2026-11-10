@@ -2,11 +2,13 @@
 
 import type { Book } from "@/app/types"
 
+import { useState } from "react"
+
 import Link from "next/link"
 import Form from "next/form"
 import { useRouter } from "next/navigation"
 
-import { useState } from "react"
+
 
 export default function SearchBox({ query, books }: { query?: string; books: Book[] }) {
     const router = useRouter()
