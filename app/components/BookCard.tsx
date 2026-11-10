@@ -6,7 +6,7 @@ import Image from "next/image"
 
 export default function BookCard({ book }: BookCardProps) {
     return (
-        <article className="h-full overflow-hidden border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+        <article className="h-full flex flex-col overflow-hidden border border-gray-300 rounded-lg hover:shadow-md transition-shadow">
             <Image 
                 className="w-full h-auto"
                 src={book.image}
@@ -14,11 +14,11 @@ export default function BookCard({ book }: BookCardProps) {
                 width={300}
                 height={300}
             />
-            <div className="p-4 space-y-2">
+            <div className="flex-1 flex flex-col p-4 gap-2">
                 <h2 className="font-semibold text-lg">{book.name}</h2>
                 <p className="text-gray-600">{book.author}</p>
-                <Pill className="capitalize">{book.category}</Pill>
-                <div className="flex items-center gap-1 text-gray-500">
+                <Pill className="capitalize self-start">{book.category}</Pill>
+                <div className="flex items-center mt-auto gap-1 text-gray-500">
                     <Heart 
                         size={16}
                     />

@@ -70,7 +70,7 @@ export default function SearchBox({ query, books }: { query?: string; books: Boo
                         setHighlightedIndex(-1)
                     }}
                     placeholder="Search for a book"
-                    className="w-full md:w-80 rounded-full border border-gray-300 px-4 py-2 text-sm"
+                    className="w-full md:w-80 rounded-full border border-gray-300 focus:outline-none focus:border-gray-500 px-4 py-2 text-sm"
                 />
                 <label htmlFor="query" className="sr-only">
                     Search for a book
